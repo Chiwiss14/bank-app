@@ -1,52 +1,85 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+    <!-- Register In start -->
+    <section class="sign-in-up register">
+        <div class="overlay pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-content">
+                            <div class="section-header">
+                                <h5 class="sub-title">The Power of Financial Freedom</h5>
+                                <h2 class="title">Let’s Get Started!</h2>
+                                <p>Please enter your email address to start your online application.</p>
+                            </div>
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                            @foreach ($errors->all() as $err)
+                            <p class="text-center text-danger">{{ $err }}</p>
+                            @endforeach
+
+                            <form method="POST" action="{{ route('register') }}">
+                                @csrf
+                                <div class="row">
+                                    <!-- First Name -->
+                                    <div class="col-12">
+                                        <div class="single-input">
+                                            <label for="first_name">First Name</label>
+                                            <input type="text" id="first_name" name="name" placeholder="John"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <!-- Email -->
+                                    <div class="col-12">
+                                        <div class="single-input">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" name="email"
+                                                placeholder="Your email ID here" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="col-12">
+                                        <div class="single-input">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="password" name="password"
+                                                placeholder="Enter password" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Confirm Password -->
+                                    <div class="col-12">
+                                        <div class="single-input">
+                                            <label for="password_confirmation">Confirm Password</label>
+                                            <input type="password" id="password_confirmation"
+                                                name="password_confirmation" placeholder="Confirm password" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Terms Agreement -->
+                                    <div class="col-12">
+                                        <div class="single-input">
+                                            <p>
+                                                By clicking submit, you agree to
+                                                <span>Bankio's Terms of Use, Privacy Policy, E-sign,</span> &
+                                                <span>Communication Authorization.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="btn-area">
+                                    <button class="cmn-btn" type="submit">Submit Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </section>
+    <!-- Register In end -->
 </x-guest-layout>
