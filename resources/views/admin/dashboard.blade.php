@@ -1,283 +1,254 @@
-<x-app-layout>
-    <!-- nimmu content area -->
-    <div class="nimmu-content-area">
+<x-admin-layout>
+
+    <div class="page-body">
         <div class="container-fluid">
-
-            <!-- Start nimmu analytic area -->
-            <div class="nimmu-analytic-area">
+            <div class="page-title">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                        <div class="nimmu-default-card nimmu-analytic-color-1">
-                            <div class="nimmu-analytic">
-                                <p>Worked Issue</p>
-                                <h3>1,146</h3>
+                    <div class="col-sm-6 col-12">
+                        <h2>Default Dashboard</h2>
+                        <p class="mb-0 text-title-gray">Welcome back! Let’s start from where you left.</p>
+                    </div>
+                    <div class="col-sm-6 col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i
+                                        class="iconly-Home icli svg-color"></i></a></li>
+                            <li class="breadcrumb-item">Dashboard</li>
+                            <li class="breadcrumb-item active">Default</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid starts-->
+        <div class="container-fluid default-dashboard">
+            <div class="row">
+                <div class="col-xl-4 proorder-xxl-1 col-sm-6 box-col-6">
+                    <div class="card welcome-banner">
+                        <div class="card-header p-0 card-no-border">
+                            <div class="welcome-card"><img class="w-100 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/welcome-bg.png" alt="" /><img
+                                    class="position-absolute img-1 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/img-1.png" alt="" /><img
+                                    class="position-absolute img-2 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/img-2.png" alt="" /><img
+                                    class="position-absolute img-3 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/img-3.png" alt="" /><img
+                                    class="position-absolute img-4 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/img-4.png" alt="" /><img
+                                    class="position-absolute img-5 img-fluid"
+                                    src="/admin_assets/images/dashboard-1/img-5.png" alt="" /></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-center">
+                                <h1>Hello, Amirreza <img src="/admin_assets/images/dashboard-1/hand.png"
+                                        alt="" /></h1>
                             </div>
+                            <p> Welcome back! Let’s start from where you left.</p>
+                            <div class="d-flex align-center justify-content-between"><a class="btn btn-pill btn-primary"
+                                    href="#">Whats New!</a><span>
+                                    <svg class="stroke-icon">
+                                        <use
+                                            href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#watch">
+                                        </use>
+                                    </svg> 11:14 AM</span></div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                        <div class="nimmu-default-card nimmu-analytic-color-2">
-                            <div class="nimmu-analytic">
-                                <p>Worked Today</p>
-                                <h3>5:32 Hr</h3>
-                            </div>
+                </div>
+
+                <div class="col-xxl-6 col-xl-8 proorder-xxl-8 col-lg-12 col-md-6 box-col-7">
+                    <div class="card">
+                        <div class="card-header card-no-border pb-0">
+                            <h3>Transition History</h3>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mb-xl-0 mb-lg-4 mb-4">
-                        <div class="nimmu-default-card nimmu-analytic-color-3">
-                            <div class="nimmu-analytic">
-                                <p>Worked This Week</p>
-                                <h3>38:27 Hr</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="nimmu-default-card nimmu-analytic-color-4">
-                            <div class="nimmu-analytic">
-                                <p>Income</p>
-                                <h3>$4,6139</h3>
+                        <div class="card-body transaction-history pt-0">
+                            <div class="table-responsive theme-scrollbar">
+                                <table class="table display table-bordernone" id="transaction" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Item Name</th>
+                                            <th>Invoice No.</th>
+                                            <th>Credit/Debit</th>
+                                            <th>Date/Time</th>
+                                            <th class="text-center">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/1.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Samsung TV</h6>
+                                                        </a>
+                                                        <p>Item Sold</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #px0101</td>
+                                            <td class="text-success">+ $3460</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Jan 25</h6>
+                                                        <p>08:35:65</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-success border-light-success text-success">
+                                                    Completed</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/2.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Spring Bed</h6>
+                                                        </a>
+                                                        <p>Bought item</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #rf304f</td>
+                                            <td class="text-danger">- $910</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Feb 20</h6>
+                                                        <p>12:35:00 </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-success border-light-success text-success">
+                                                    Completed</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/3.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Long Dress</h6>
+                                                        </a>
+                                                        <p>Bought item</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #dnj480</td>
+                                            <td class="text-success">+ $4380</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Oct 25</h6>
+                                                        <p>04:39:08</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-warning border-light-warning text-warning">
+                                                    Pending</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/4.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Phillip Lightbulb</h6>
+                                                        </a>
+                                                        <p>Item Sold</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #g189d0</td>
+                                            <td class="text-success">+ $246</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Dec 25</h6>
+                                                        <p>08:35:65</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-danger border-light-danger text-danger">
+                                                    Canceled</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/5.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Sofa Hauga</h6>
+                                                        </a>
+                                                        <p>Item Sold</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #31d8fs</td>
+                                            <td class="text-danger">- $220</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Jan 25</h6>
+                                                        <p>10:20:87</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-success border-light-success text-success">
+                                                    Completed</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="flex-shrink-0"><img
+                                                            src="/admin_assets/images/dashboard-1/icon/6.png"
+                                                            alt="" /></div>
+                                                    <div class="flex-grow-1"><a href="product-page.html">
+                                                            <h6>Apple iMac 19”</h6>
+                                                        </a>
+                                                        <p>Item Sold</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td> #g5384h</td>
+                                            <td class="text-success">+ $983</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1">
+                                                        <h6>Feb 05</h6>
+                                                        <p>10:49:50</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="btn bg-light-success border-light-success text-success">
+                                                    Completed</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <!-- End nimmu analytic area -->
-
-
-            <!-- Start nimmu trafic area -->
-            <div class="nimmu-trafic-area">
-                <div class="row">
-                    <div class="col-xl-4 col-12 mb-xl-0 mb-4">
-                        <div class="nimmu-default-card">
-                            <div class="nimmu-card-header">
-                                <h3>Summary</h3>
-                            </div>
-                            <div class="nimmu-card-body">
-                                <div id="nimmu-summary"></div>
-                                <ul class="summary-list">
-                                    <li style="margin-bottom: 20px;">
-                                        <h3><span style="background: rgb(14, 183, 254);"></span> 47%</h3>
-                                        <span>Open</span>
-                                    </li>
-                                    <li style="margin-bottom: 20px;">
-                                        <h3><span style="background: rgb(59, 83, 219);"></span> 11%</h3>
-                                        <span>To Do</span>
-                                    </li>
-                                    <li>
-                                        <h3><span style="background: rgb(241, 104, 44);"></span> 24%</h3>
-                                        <span>In Progress</span>
-                                    </li>
-                                    <li>
-                                        <h3><span style="background: rgb(189, 32, 211);"></span> 18%</h3>
-                                        <span>Close</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-12 ">
-                        <div class="nimmu-default-card">
-                            <div class="nimmu-card-header">
-                                <h3>Progress</h3>
-                            </div>
-                            <div class="nimmu-card-body">
-                                <div id="nimmu-progress" style="padding-top: 20px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End nimmu trafic area -->
-
-            <!-- Start Activity -->
-            <div class="nimmu-activity nimmu-mt-30">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="nimmu-default-card">
-                            <div class="nimmu-card-header">
-                                <h3>Report</h3>
-                            </div>
-                            <div class="nimmu-card-body">
-                                <div class="nimmu-activity-table table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 210px;">Members</th>
-                                                <th>Progress</th>
-                                                <th>Shift</th>
-                                                <th>time spent</th>
-                                                <th>Weekly Limite</th>
-                                                <th>Remaining</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th>
-                                                    <div class="nimmu-team-activity">
-                                                        <img src="images/team/task_member.png">
-                                                        <div class="name">Florence Carter</div>
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 85%"
-                                                            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Nov 5 - Nov 7</td>
-                                                <td>00:00:00</td>
-                                                <td>40:00:00</td>
-                                                <td>40:00:00</td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div class="nimmu-team-activity">
-                                                        <img src="images/team/task_member1.png">
-                                                        <div class="name">Emerson Zulauf</div>
-                                                    </div>
-                                                    </td>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 50%"
-                                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Nov 8 - Nov 10</td>
-                                                <td>00:00:00</td>
-                                                <td>40:00:00</td>
-                                                <td>40:00:00</td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div class="nimmu-team-activity">
-                                                        <img src="images/team/task_member2.png">
-                                                        <div class="name">Benjamin Jones</div>
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 95%"
-                                                            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Nov 11 - Nov 13</td>
-                                                <td>00:00:00</td>
-                                                <td>40:00:00</td>
-                                                <td>40:00:00</td>
-                                            </tr>
-                                            <tr>
-                                                <th>
-                                                    <div class="nimmu-team-activity">
-                                                        <img src="images/team/task_member3.png">
-                                                        <div class="name">Ned Runolfsson</div>
-                                                    </div>
-                                                </th>
-                                                <td>
-                                                    <div class="progress">
-                                                        <div class="progress-bar" role="progressbar" style="width: 20%"
-                                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Nov 14 - Nov 19</td>
-                                                <td>00:00:00</td>
-                                                <td>40:00:00</td>
-                                                <td>40:00:00</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Activity -->
-
-            <!-- Start Revenue area -->
-            <div class="nimmu-reviews nimmu-mt-30">
-                <div class="row">
-                    <div class="col-xl-4 col-12 mb-xl-0 mb-4">
-                        <div class="nimmu-default-card">
-                            <div class="nimmu-card-header nimmu-mb-30">
-                                <h3>Reviews</h3>
-                            </div>
-                            <div class="nimmu-card-body">
-                                <div class="reviews-progress">
-                                    <p class="d-flex justify-content-between align-items-center">
-                                        <span>5 Star</span>
-                                        <span>47%</span>
-                                    </p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 47%"
-                                            aria-valuenow="47" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="reviews-progress">
-                                    <p class="d-flex justify-content-between align-items-center">
-                                        <span>4 Star</span>
-                                        <span>67%</span>
-                                    </p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 67%"
-                                            aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="reviews-progress">
-                                    <p class="d-flex justify-content-between align-items-center">
-                                        <span>3 Star</span>
-                                        <span>29%</span>
-                                    </p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 29%"
-                                            aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="reviews-progress">
-                                    <p class="d-flex justify-content-between align-items-center">
-                                        <span>2 Star</span>
-                                        <span>12%</span>
-                                    </p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 12%"
-                                            aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="reviews-progress">
-                                    <p class="d-flex justify-content-between align-items-center">
-                                        <span>1 Star</span>
-                                        <span>3%</span>
-                                    </p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 3%"
-                                            aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-12">
-                        <div class="nimmu-default-card">
-                            <div class="nimmu-card-header nimmu-mb-30">
-                                <div class="d-felx justify-content-between align-items-center">
-                                    <div class="nimmu-header-left">
-                                        <h3>Review Over Time</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="nimmu-card-body">
-                                <div id="nimmu-overtime"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Revenue area -->
-
-
         </div>
     </div>
-    <!-- nimmu content area -->
-</x-app-layout>
+</x-admin-layout>
