@@ -21,11 +21,6 @@
                  <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Home-dashboard"></use>
                </svg>
                <h6>Dashboards</h6><span class="badge">3</span><i class="iconly-Arrow-Right-2 icli"></i></a>
-             <ul class="sidebar-submenu">
-               <li> <a href="index.html">Default</a></li>
-               <li><a href="dashboard-02.html">Ecommerce </a></li>
-               <li> <a href="dashboard-03.html">Education</a></li>
-             </ul>
            </li>
            <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="javascript:void(0)">
                <svg class="stroke-icon">

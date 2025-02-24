@@ -13,13 +13,6 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function users()
-    {
-        // Fetch users from the database
-        $users = User::all();
-        
-        return view('admin.users', compact('users'));
 
-    }
 
 }

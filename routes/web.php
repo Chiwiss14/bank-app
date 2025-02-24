@@ -4,7 +4,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BankCardController;
+use App\Http\Controllers\DealsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UtilitiesController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -35,7 +37,25 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
 Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
-    Route::get('/purchase-airtime', [UserController::class, 'purchaseAirtime'])->name('user.purchase-airtime');
+
+    Route::get('/purchase-airtime', [UtilitiesController::class, 'purchaseAirtime'])->name('user.airtime');
+    Route::post('/store-airtime', [UtilitiesController::class, 'storeAirtime'])->name('airtime.store');
+
+    Route::get('/purchase-data', [UtilitiesController::class, 'purchaseData'])->name('user.data');
+    Route::post('/store-data', [UtilitiesController::class, 'storeData'])->name('data.store');
+
+
+
+    Route::get('/send-money', [DealsController::class, 'sendMoney'])->name('user.send');
+    Route::post('/transfer-store', [DealsController::class, 'storeTransfer'])->name('transfer.store');
+
+
+    Route::get('/deposit-money', [DealsController::class, 'depositMoney'])->name('user.deposit');
+    Route::post('/deposit-store', [DealsController::class, 'storeDeposit'])->name('deposit.store');
+
+    Route::get('/confirm-password', [UserController::class, 'confirmPin'])->name('user.confirm_pin');
+    Route::post('/password-store', [UserController::class, 'storePin'])->name('password.store');
+
 
 
 });

@@ -1,29 +1,43 @@
 <x-app-layout>
-    <form method="POST" action="{{ route('airtime.purchase') }}">
-        @csrf
+    <div class="col-lg-9">
+        <div class="profile-content">
+            <h3 class="admin-heading">Buy Airtime</h3>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                    aria-labelledby="pills-profile-tab">
+                    <form action="{{ route('airtime.store') }}" method="POST">@csrf
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" name="phone" class="form-control" placeholder="Enter phone number" required>
 
-        <label for="network">Select Network:</label>
-        <select name="network" class="form-control">
-            <option value="mtn">MTN</option>
-            <option value="airtel">Airtel</option>
-            <option value="glo">Glo</option>
-            <option value="9mobile">9Mobile</option>
-        </select>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="number" name="phone_number" class="form-control"
+                                placeholder="Enter phone number" required required maxlength="11" minlength="11">
+                        </div>
 
-        <label for="amount">Amount:</label>
-        <input type="number" name="amount" class="form-control" placeholder="Enter amount" required>
+                        <div class="form-group">
+                            <label for="network">Select Network:</label>
+                            <select name="network" class="form-control">
+                                <option value="mtn">MTN</option>
+                                <option value="airtel">Airtel</option>
+                                <option value="glo">Glo</option>
+                                <option value="9mobile">9Mobile</option>
+                            </select>
+                        </div>
 
-        <label for="payment_method">Payment Method:</label>
-        <select name="payment_method" class="form-control">
-            <option value="wallet">Wallet</option>
-            <option value="card">Credit/Debit Card</option>
-            <option value="bank">Bank Transfer</option>
-        </select>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input type="number" name="amount" class="form-control" placeholder="Enter amount"
+                                required>
 
-        <button type="submit" class="btn btn-primary mt-3">Buy Airtime</button>
-    </form>
+                        </div>
+
+
+                        <button class="btn btn-danger" type="submit">Buy Airtime</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </x-app-layout>

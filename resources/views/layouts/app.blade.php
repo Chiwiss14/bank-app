@@ -37,7 +37,27 @@
                                     <a href="#" class="top-text"><i class="fas fa-envelope"></i> +21 (0) 332 0000 12</a>
                                 </div>
                             </div>
-
+                            <div class="col-sm-4 text-sm-right">
+                                <div class="social-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i> </a>
+                                </div>
+                                <div class="header-language">
+                                    <a href="#" class="langbtn">
+                                        <span>EN</span>
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                    <ul class="list-unstyled dropdown-menu" style="display: none">
+                                        <li class="active"><a href="#">EN</a></li>
+                                        <li><a href="#">FR</a></li>
+                                        <li><a href="#">PT</a></li>
+                                        <li><a href="#">IT</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,10 +72,14 @@
                             <a id="mobile-menu-toggler" href="#"><i class="fas fa-bars"></i></a>
                             <ul>
                                 <li class="current-menu-item has-menu-child">
-                                    <a href="#">Homme</a>
+                                    <a href="#">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route("dashboard") }}">Home 01</a></li>
-
+                                        <li><a href="#">Home Gradient</a></li>
+                                        <li><a href="#">Home 01</a></li>
+                                        <li><a href="#">Home 02</a></li>
+                                        <li><a href="#">Home 03</a></li>
+                                        <li><a href="#">Home 04</a></li>
+                                        <li><a href="#">Home 05</a></li>
                                     </ul>
                                 </li>
                                 <li class="current-menu-item"><a href="dashboard.html">Dashboard</a></li>
@@ -64,13 +88,16 @@
                                     <ul class="sub-menu">
                                         <li><a href="#">Send Money</a></li>
                                         <li><a href="#">Receive Money</a></li>
-                                        <li><a href="#">How it works - Send</a></li>
-                                        <li><a href="#">How it works - Receive</a></li>
-                                        <li><a href="#">How it works - Paybills</a></li>
                                         <li><a href="#">Sign up</a></li>
                                     </ul>
                                 </li>
-
+                                <li class="has-menu-child">
+                                    <a href="#">About</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">About 01</a></li>
+                                        <li><a href="#">About 02</a></li>
+                                    </ul>
+                                </li>
                                 <li class="has-menu-child">
                                     <a href="#">Blog</a>
                                     <ul class="sub-menu">
@@ -78,6 +105,7 @@
                                         <li><a href="#">Blog Details</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="https://demo.themeies.com/roysha-html/contact.html">Contact</a></li>
                                 <li class="has-menu-child pro-menu-drop">
                                     <a href="#">
                                         <div class="header-pro-thumb">
@@ -119,7 +147,108 @@
                 <!--end main header-->
             </header>
             <!-- Header end -->
-            {{ $slot }}
+
+            <!-- Admin Hero section-->
+            <div class="hero-section">
+                <div class="container">
+                    <div class="row profile-complete-area">
+                        <div class="col">
+                            <div class="progress" data-percentage="50">
+                                <span class="progress-left">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar"></span>
+                                </span>
+                                <div class="progress-value">
+                                    <div class="profile-thumb mt-3 mb-4">
+                                        <img class="rounded-circle" src="/user_assets/images/profile.jpg" alt="" />
+                                        <div class="profile-thumb-edit verify-icon" data-toggle="tooltip" title="Profile Verified">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="profile-name">Jhone Doue</p>
+                        </div>
+
+
+                        <div class="col">
+                            <a href="#">
+                                <div class="profile-item">
+                                    <i class="fas fa-credit-card bg-icon"></i>
+                                    <i class="far fa-circle Verified-icon"></i>
+                                    <p class="title">Add Card</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Admin End of Hero section-->
+
+
+
+            <!-- Admin Content Section  -->
+            <div id="content" class="py-4">
+                <div class="container">
+                    <div class="row">
+                        <!-- Left sidebar -->
+                        <aside class="col-lg-3 sidebar">
+                            <div class="widget admin-widget p-0">
+                                <div class="Profile-menu">
+                                    <ul class="nav secondary-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('user.deposit')}}"><i class="fas fa-plus"></i>Deposit Money</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('user.send') }}"><i class="far fa-paper-plane"></i>Send Money</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('user.airtime') }}"><i class="fas fa-wallet"></i>Buy Airtime</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('user.data') }}"><i class="fas fa-list-ul"></i>Buy Data</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="profile-notifications.html"><i class="fas fa-cog"></i>Balance</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('user.confirm_pin') }}"><i class="fas fa-cog"></i>Input Password</a>Confirm Password</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget admin-widget">
+                                <i class="fas fa-coins admin-overlay-icon"></i>
+                                <h2>Earn $25</h2>
+                                <p>Have questions or concerns regrading</p>
+                                <a href="#" class="btn btn-default btn-center"><span>Refer A friend</span></a>
+                            </div>
+
+                            <div class="widget admin-widget">
+                                <i class="fas fa-comments admin-overlay-icon"></i>
+                                <h2>Need Help?</h2>
+                                <p>
+                                    Have questions or concerns regrading your account?<br />
+                                    Our experts are here to help!.
+                                </p>
+                                <a href="#" class="btn btn-default btn-center"><span>Start Chat</span></a>
+                            </div>
+                        </aside>
+                        <!-- Left Panel End -->
+
+                        {{ $slot }}
+                    </div>
+                </div>
+            </div>
+            <!-- Content end -->
+
             <!-- Footer strat -->
             <footer class="footer">
                 <div class="foo-top">
@@ -129,9 +258,12 @@
                                 <div class="widget foo-nav">
                                     <h5>Access Us</h5>
                                     <ul>
+                                        <li><a href="#">About Us</a></li>
                                         <li><a href="#">Payment</a></li>
                                         <li><a href="#">Send Money</a></li>
                                         <li><a href="#">Receive Money</a></li>
+                                        <li><a href="#">Fees</a></li>
+                                        <li><a href="#">Services</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -139,8 +271,12 @@
                                 <div class="widget foo-nav">
                                     <h5>Help Center</h5>
                                     <ul>
+                                        <li><a href="#">Customer Care</a></li>
                                         <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Live Chat</a></li>
                                         <li><a href="#">Payment</a></li>
+                                        <li><a href="#">Custom API</a></li>
+                                        <li><a href="#">Affiliate</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -153,10 +289,23 @@
                                         <li><a href="#">Twitter</a></li>
                                         <li><a href="#">Linkedin</a></li>
                                         <li><a href="#">Youtube</a></li>
+                                        <li><a href="#">Forum</a></li>
                                     </ul>
                                 </div>
                             </div>
-
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <div class="widget foo-nav">
+                                    <h5>Partners</h5>
+                                    <ul>
+                                        <li><a href="#">Refer A Frient</a></li>
+                                        <li><a href="#">Affiliate Programs</a></li>
+                                        <li><a href="#">Payment API</a></li>
+                                        <li><a href="#">Partner Directory</a></li>
+                                        <li><a href="#">Become A Partner</a></li>
+                                        <li><a href="#">Find Locations</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="widget foo-nav">
                                     <h5>Services</h5>

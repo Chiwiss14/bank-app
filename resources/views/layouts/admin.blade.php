@@ -95,13 +95,30 @@
 
                         <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
                                 href="javascript:void(0)">
-
-                                <h6>Dashboards</h6><span class="badge">3</span><i
-                                    class="iconly-Arrow-Right-2 icli"></i>
+                                <h6>Dashboard</h6>
                             </a>
-
                         </li>
 
+
+                        <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
+                            href="javascript:void(0)">
+                            <h6>Registered Users</h6>
+                        </a>
+                       </li>
+
+                       <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
+                        href="layout-dark.html">
+                        <h6>View All Transactions</h6>
+                        </a>
+                       </li>
+
+                       <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
+                        href="javascript:void(0)">
+                        <h6>Manage Users</h6>
+                        </a>
+                       </li>
+
+                       
                     </ul>
                 </div>
                 <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
