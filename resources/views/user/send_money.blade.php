@@ -8,6 +8,11 @@
                     aria-labelledby="pills-profile-tab">
                     <form id="send-money" method="POST" action="{{ route('transfer.store') }}" class="form bg-offwhite py-5 ">
                         @csrf
+                      @foreach ($errors->all() as $error )
+                        <p class="text-danger">{{ $error }}</p>
+
+                      @endforeach
+
                         <div class="text-center">
                             <h3 class="text-5 msg-header">Personal Details</h3>
                             <p class="text-4 text-center">Send your money anytime, anywhere in the world.</p>
@@ -27,7 +32,7 @@
 
                         <div class="form-group">
                             <label for="password">Input Password</label>
-                            <input type="text" name="input_password" class="form-control" required />
+                            <input type="password" name="pin" class="form-control" />
                         </div>
 
                         <button class="btn btn-danger" type="submit">SEND</button>

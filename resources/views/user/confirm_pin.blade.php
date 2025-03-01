@@ -6,7 +6,7 @@
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
                     aria-labelledby="pills-profile-tab">
-                    <form id="send-money" method="POST" action="{{ route('password.store') }}" class="form bg-offwhite py-5 ">
+                    <form id="send-money" method="POST" action="{{ route('pin.store') }}" class="form bg-offwhite py-5 ">
                         @csrf
                         <div class="text-center">
                             <h3 class="text-5 msg-header">Pin</h3>

@@ -7,11 +7,14 @@
                     aria-labelledby="pills-profile-tab">
                     <form action="{{ route('airtime.store') }}" method="POST">@csrf
 
+                        @foreach ($errors->all() as $error)
+                            <p class="text-danger">{{ $error }}</p>
+                        @endforeach
 
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
                             <input type="number" name="phone_number" class="form-control"
-                                placeholder="Enter phone number" required required maxlength="11" minlength="11">
+                                placeholder="Enter phone number" required required>
                         </div>
 
                         <div class="form-group">
@@ -29,6 +32,11 @@
                             <input type="number" name="amount" class="form-control" placeholder="Enter amount"
                                 required>
 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pin">Transaction Pin</label>
+                            <input type="password" name="pin" class="form-control" id="pin" required maxlength="4" />
                         </div>
 
 

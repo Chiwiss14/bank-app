@@ -19,14 +19,18 @@ class DealsController extends Controller
         $request->validate([
             'amount' => 'required|numeric |min:0',
             'bank_account' => 'required|string',
-            'input_password' => 'required|integer',
+            'pin' => 'required|numeric',
         ]);
+
+        if(!Hash::check($request->pin,Auth::user()->pin )){
+            return back()->with(['eror'=>'incorrect pin']);
+        }
 
         //
         $transaction = new Transaction();
         $transaction->user_id = Auth::id();
         $transaction->amount = $request->amount;
-        $transaction->type = 'transfer';
+        $transaction->type_id = 1;
         $transaction->status = 'pending'; // Default status
         $transaction->details = $request->bank_account;
         $transaction->save();
@@ -43,12 +47,12 @@ class DealsController extends Controller
         $transaction = new Transaction();
         $transaction->user_id = Auth::id();
         $transaction->amount = $request->amount;
-        $transaction->type = 'deposit';
+        $transaction->type_id = 'deposit';
         $transaction->status = 'pending'; // Default status
         $transaction->details = $request->bank_account;
         $transaction->save();
 
     }
 
-   
+
 }

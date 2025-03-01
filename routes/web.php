@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\AirtimeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BankCardController;
@@ -14,11 +15,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
- if (Auth::user()->role === 'admin') {
-     return redirect()->route('admin.dashboard');
- } else {
-     return view('user.dashboard');
- }
+    if (Auth::user()->role === 'admin') {
+        return redirect()->route('admin.dashboard');
+    } else {
+        return view('user.dashboard');
+    }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -38,8 +39,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
 
-    Route::get('/purchase-airtime', [UtilitiesController::class, 'purchaseAirtime'])->name('user.airtime');
-    Route::post('/store-airtime', [UtilitiesController::class, 'storeAirtime'])->name('airtime.store');
+    Route::get('/purchase-airtime', [AirtimeController::class, 'purchaseAirtime'])->name('user.airtime');
+    Route::post('/store-airtime', [AirtimeController::class, 'storeAirtime'])->name('airtime.store');
 
     Route::get('/purchase-data', [UtilitiesController::class, 'purchaseData'])->name('user.data');
     Route::post('/store-data', [UtilitiesController::class, 'storeData'])->name('data.store');
@@ -54,9 +55,9 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::post('/deposit-store', [DealsController::class, 'storeDeposit'])->name('deposit.store');
 
     Route::get('/confirm-password', [UserController::class, 'confirmPin'])->name('user.confirm_pin');
-    Route::post('/password-store', [UserController::class, 'storePin'])->name('password.store');
+    Route::post('/password-store', [UserController::class, 'storePin'])->name('pin.store');
 
-
+    Route::get('/history', [UserController::class, 'historyPage'])->name('user.transaction_history');
 
 });
 
