@@ -39,7 +39,7 @@ class AirtimeController extends Controller
         $transaction = new Transaction();
         $transaction->user_id = Auth::id();
         $transaction->amount = $request->amount;
-        $transaction->type_id =2;
+        $transaction->type_id=2;
         $transaction->status = 'sucessful'; // Default status
         $transaction->details = "$request->phone_number $request->network";
         $transaction->save();

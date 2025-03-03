@@ -76,20 +76,7 @@
                                             </ul>
                                         </li>
                                         <li><a class="nav-link" href="product.html">Product</a></li>
-                                        <li class="dropend sub-navbar">
-                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
-                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Loan</a>
-                                            <ul class="dropdown-menu sub-menu shadow">
-                                                <li><a class="nav-link" href="business-loan.html">Business Loans</a>
-                                                </li>
-                                                <li><a class="nav-link" href="educations-loan.html">Educations Loans</a>
-                                                </li>
-                                                <li><a class="nav-link" href="home-loan.html">Home Loans</a></li>
-                                                <li><a class="nav-link" href="car-loan.html">Car Loans</a></li>
-                                                <li><a class="nav-link" href="personal-loan.html">Personal Loans</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+
                                         <li><a class="nav-link" href="card.html">Card</a></li>
                                     </ul>
                                 </li>
@@ -97,27 +84,10 @@
                                     <a class="nav-link dropdown-toggle" href="javascript:void(0)"
                                         data-bs-toggle="dropdown" data-bs-auto-close="outside">Pages</a>
                                     <ul class="dropdown-menu main-menu shadow">
-                                        <li><a class="nav-link" href="affiliate.html">Affiliate</a></li>
-                                        <li class="dropend sub-navbar">
-                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
-                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Blog</a>
-                                            <ul class="dropdown-menu sub-menu shadow">
-                                                <li><a class="nav-link" href="blog-list.html">Blog List</a></li>
-                                                <li><a class="nav-link" href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a class="nav-link" href="blog-single.html">Blog Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="remittance.html">Remittance</a></li>
-                                        <li><a class="nav-link" href="career-single.html">Career Single</a></li>
-                                        <li><a class="nav-link" href="faqs.html">Faqs</a></li>
-                                        <li><a class="nav-link" href="login.html">Login</a></li>
+                                        <li><a class="nav-link" href="{{route ('login') }}">Login</a></li>
                                         <li><a class="nav-link" href="password-set.html">Password Set</a></li>
                                         <li><a class="nav-link" href="varify-number.html">Varify Number</a></li>
                                         <li><a class="nav-link" href="otp.html">OTP</a></li>
-
-                                        <li><a class="nav-link" href="terms-conditions.html">Terms Conditions</a></li>
-                                        <li><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
-
                                     </ul>
                                 </li>
                                 <li class="nav-item">

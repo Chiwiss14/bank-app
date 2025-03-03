@@ -30,8 +30,8 @@ class DealsController extends Controller
         $transaction = new Transaction();
         $transaction->user_id = Auth::id();
         $transaction->amount = $request->amount;
-        $transaction->type_id = 1;
-        $transaction->status = 'pending'; // Default status
+        $transaction->type_id=1; // 1 for transfer
+        $transaction->status = 'sucessful'; // Default status
         $transaction->details = $request->bank_account;
         $transaction->save();
 

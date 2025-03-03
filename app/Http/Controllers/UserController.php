@@ -22,7 +22,13 @@ class UserController extends Controller
     }
 
     public function historyPage(){
-        $transactions = Transaction::where('user_id', Auth::id())->latest()->get();
+
+        $transactions = Transaction::with('transactionType')->where('user_id', Auth::id())->latest()->get();
+        Transaction::with('transactionType')->first();
+
+
+
+        // $transactions = Transaction::where('user_id', Auth::id())->latest()->get();
 
         return view ('user.transaction_history' ,compact('transactions'));
     }
