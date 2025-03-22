@@ -7,12 +7,9 @@
                     aria-labelledby="pills-profile-tab">
                     <form action="{{ route('data.store') }}"  method="POST">@csrf
 
-
-
                       <label for="phone">Phone Number:</label>
                         <input type="number" name="phone_number" class="form-control" placeholder="Enter phone number" required
                         required maxlength="11" minlength="11">
-
 
 
                         <label for="network">Select Network:</label>
@@ -23,9 +20,12 @@
                             <option value="9mobile">9Mobile</option>
                         </select>
 
-
                         <label for="amount">Amount:</label>
                         <input type="number" name="amount" class="form-control" placeholder="Enter amount" required>
+
+                        <label for="amount">Variation Code:</label>
+                        <input type="text" name="code" class="form-control" placeholder="Enter variation" required>
+
 
                         <label for="payment_method">Payment Method:</label>
                         <select name="payment_method" class="form-control">

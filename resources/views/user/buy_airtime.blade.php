@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="phone">Phone Number:</label>
                             <input type="number" name="phone_number" class="form-control"
-                                placeholder="Enter phone number" required required>
+                                placeholder="Enter phone number"  required>
                         </div>
 
                         <div class="form-group">

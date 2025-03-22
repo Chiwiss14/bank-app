@@ -21,7 +21,7 @@
                         <div class="form-group">
                             <label for="account">Recipient Details</label>
                             <input type="text"  class="form-control"
-                                name="bank_account" required placeholder="Account" />
+                                name="recipient_email" required placeholder="Account" />
                         </div>
 
                         <div class="form-group">
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password">Input Password</label>
+                            <label for="password">Input Pin</label>
                             <input type="password" name="pin" class="form-control" />
                         </div>
 

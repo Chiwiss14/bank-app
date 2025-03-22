@@ -86,7 +86,7 @@
                                     <ul class="dropdown-menu main-menu shadow">
                                         <li><a class="nav-link" href="{{route ('login') }}">Login</a></li>
                                         <li><a class="nav-link" href="password-set.html">Password Set</a></li>
-                                        <li><a class="nav-link" href="varify-number.html">Varify Number</a></li>
+                                        <li><a class="nav-link" href="{{ route('logout') }}">Logout</a></li>
                                         <li><a class="nav-link" href="otp.html">OTP</a></li>
                                     </ul>
                                 </li>

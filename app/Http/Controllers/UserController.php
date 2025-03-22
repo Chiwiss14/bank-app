@@ -13,7 +13,8 @@ class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('user.dashboard');
+        $user = Auth::user();
+        return view('user.dashboard', ['balance' => $user->balance]);
     }
 
     public function confirmPin()
@@ -23,12 +24,8 @@ class UserController extends Controller
 
     public function historyPage(){
 
-        $transactions = Transaction::with('transactionType')->where('user_id', Auth::id())->latest()->get();
-        Transaction::with('transactionType')->first();
+        $transactions = Auth::user()->transactions()->latest()->get();
 
-
-
-        // $transactions = Transaction::where('user_id', Auth::id())->latest()->get();
 
         return view ('user.transaction_history' ,compact('transactions'));
     }
@@ -46,7 +43,7 @@ class UserController extends Controller
             // Store verification status in session
             session(['pin_verified' => true]);
 
-            return redirect()->route('user.buy_airtime'); // Redirect to the desired route
+            // return redirect()->route('user.buy_airtime'); // Redirect to the desired route
         }
 
 
@@ -56,4 +53,10 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', 'Pin updated successfully');
     }
+
+    public function updateBalance($amount) {
+        // $this->balance += $amount;
+        $this->save();
+    }
+
 }

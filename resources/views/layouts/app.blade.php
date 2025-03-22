@@ -205,13 +205,14 @@
                             <div class="Profile-menu">
                                 <ul class="nav secondary-nav">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="dashboard.html"><i
+                                        <a class="nav-link" href="{{ route('user.dashboard') }}"><i
                                                 class="fas fa-tachometer-alt"></i>Dashboard</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.deposit') }}"><i
                                                 class="fas fa-plus"></i>Deposit Money</a>
                                     </li>
+
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.send') }}"><i
                                                 class="far fa-paper-plane"></i>Send Money</a>
@@ -220,43 +221,37 @@
                                         <a class="nav-link" href="{{ route('user.airtime') }}"><i
                                                 class="fas fa-wallet"></i>Buy Airtime</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('vtpass.selectNetwork') }}"><i
+                                                class="fas fa-wallet"></i>Select Network</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.data') }}"><i
                                                 class="fas fa-list-ul"></i>Buy Data</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="profile-notifications.html"><i
+                                        <a class="nav-link" href="{{ route('wallet.show') }}"><i
                                                 class="fas fa-cog"></i>Balance</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.confirm_pin') }}"><i
-                                                class="fas fa-cog"></i>Confirm Pin</a>
+                                                class="fas fa-cog"></i>Set Pin</a>
                                     </li>
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.transaction_history') }}"><i
                                                 class="fas fa-cog"></i>Transaction History</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('electricity.show') }}"><i
+                                                class="fas fa-cog"></i>Buy Power</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="widget admin-widget">
-                            <i class="fas fa-coins admin-overlay-icon"></i>
-                            <h2>Earn $25</h2>
-                            <p>Have questions or concerns regrading</p>
-                            <a href="#" class="btn btn-default btn-center"><span>Refer A friend</span></a>
-                        </div>
-
-                        <div class="widget admin-widget">
-                            <i class="fas fa-comments admin-overlay-icon"></i>
-                            <h2>Need Help?</h2>
-                            <p>
-                                Have questions or concerns regrading your account?<br />
-                                Our experts are here to help!.
-                            </p>
-                            <a href="#" class="btn btn-default btn-center"><span>Start Chat</span></a>
-                        </div>
                     </aside>
                     <!-- Left Panel End -->
 
@@ -284,19 +279,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6">
-                            <div class="widget foo-nav">
-                                <h5>Help Center</h5>
-                                <ul>
-                                    <li><a href="#">Customer Care</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Live Chat</a></li>
-                                    <li><a href="#">Payment</a></li>
-                                    <li><a href="#">Custom API</a></li>
-                                    <li><a href="#">Affiliate</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="widget foo-nav">
                                 <h5>Follow Us</h5>
@@ -310,19 +293,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6">
-                            <div class="widget foo-nav">
-                                <h5>Partners</h5>
-                                <ul>
-                                    <li><a href="#">Refer A Frient</a></li>
-                                    <li><a href="#">Affiliate Programs</a></li>
-                                    <li><a href="#">Payment API</a></li>
-                                    <li><a href="#">Partner Directory</a></li>
-                                    <li><a href="#">Become A Partner</a></li>
-                                    <li><a href="#">Find Locations</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="col-lg-2 col-md-4 col-sm-6">
                             <div class="widget foo-nav">
                                 <h5>Services</h5>

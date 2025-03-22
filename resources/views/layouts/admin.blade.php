@@ -107,18 +107,18 @@
                        </li>
 
                        <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
-                        href="layout-dark.html">
+                        href="{{ route('admin.transactions') }}">
                         <h6>View All Transactions</h6>
                         </a>
                        </li>
 
                        <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link"
-                        href="javascript:void(0)">
+                        href="{{ route('admin.users') }}">
                         <h6>Manage Users</h6>
                         </a>
                        </li>
 
-                       
+
                     </ul>
                 </div>
                 <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

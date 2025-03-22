@@ -16,7 +16,7 @@
                 <tbody>
                     @foreach ($transactions as $transaction)
                         <tr>
-                            <td>{{ $transaction->id }}</td>
+                            <td>{{ $transaction->user->name}}</td>
                            <td> {{ optional($transaction->transactionType)->name ?? 'Unknown Type' }}</td>
                             <td>{{ $transaction->amount }}</td>
                             <td>{{ ucfirst($transaction->status) }}</td>

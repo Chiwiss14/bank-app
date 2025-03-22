@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Is_Admin
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class Is_Admin
     public function handle(Request $request, Closure $next): Response
 
     {
-        if (\Illuminate\Support\Facades\Auth::check() && \Illuminate\Support\Facades\Auth::user()->Is_Admin) {  // Check if the user is admin
+        if (\Illuminate\Support\Facades\Auth::check() && \Illuminate\Support\Facades\Auth::user()->IsAdmin) {  // Check if the user is admin
             return $next($request);
         }
         return redirect('/')->with('error', 'Unauthorized Access');  // Redirect non-admin users
