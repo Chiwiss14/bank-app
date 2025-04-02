@@ -93,20 +93,7 @@
                                     <li><a href="#">Sign up</a></li>
                                 </ul>
                             </li>
-                            <li class="has-menu-child">
-                                <a href="#">About</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">About 01</a></li>
-                                    <li><a href="#">About 02</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-menu-child">
-                                <a href="#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Blog Details</a></li>
-                                </ul>
-                            </li>
+
                             <li><a href="https://demo.themeies.com/roysha-html/contact.html">Contact</a></li>
                             <li class="has-menu-child pro-menu-drop">
                                 <a href="#">
@@ -114,12 +101,12 @@
                                         <img class="rounded-circle" src="/user_assets/images/profile.jpg"
                                             alt="" />
                                     </div>
-                                    Jhone Due <i class="fas fa-chevron-down"></i>
+                                    Confidence Nsirim <i class="fas fa-chevron-down"></i>
                                 </a>
                                 <ul class="dropdown-menu-md sub-menu profile-drop">
                                     <li class="dropdown-header">
                                         <div>
-                                            <h5 class="hidden-xs m-b-0 text-primary text-ellipsis">Jhon Due</h5>
+                                            <h5 class="hidden-xs m-b-0 text-primary text-ellipsis">Confidence</h5>
                                             <div class="small text-muted"><span>Membership ID P14362606</span></div>
                                         </div>
                                     </li>
@@ -139,7 +126,7 @@
                                         </a>
                                     </li>
                                     <li class="nav__dropdown-menu-items">
-                                        <a href="#"><i class="icon icon-logout"></i><span>Logout</span></a>
+                                        <a href="{{ route('logout') }}"><i class="icon icon-logout"></i><span>Logout</span></a>
                                     </li>
                                 </ul>
                             </li>
@@ -176,6 +163,10 @@
                         </div>
                         <p class="profile-name">Jhone Doue</p>
                     </div>
+                    <div class="profile-item text-center">
+                        <h3>Wallet Balance: ₦{{ number_format(auth()->user()->balance, 2) }}</h3>
+
+                    </div>
 
 
                     <div class="col">
@@ -209,7 +200,7 @@
                                                 class="fas fa-tachometer-alt"></i>Dashboard</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.deposit') }}"><i
+                                        <a class="nav-link" href="{{ route('pay') }}"><i
                                                 class="fas fa-plus"></i>Deposit Money</a>
                                     </li>
 
@@ -224,12 +215,12 @@
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('vtpass.selectNetwork') }}"><i
-                                                class="fas fa-wallet"></i>Select Network</a>
+                                                class="fas fa-wallet"></i>Buy Data</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" href="{{ route('user.data') }}"><i
                                                 class="fas fa-list-ul"></i>Buy Data</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('wallet.show') }}"><i
                                                 class="fas fa-cog"></i>Balance</a>

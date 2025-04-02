@@ -21,7 +21,7 @@ class WalletController extends Controller
         ]);
 
         $user = Auth::user();
-        $user->increment('balance', $request->amount); // Correct way to update balance
+        $user->increment('balance', $request->amount); 
 
         return back()->with('success', 'Deposit successful!');
     }
@@ -81,6 +81,6 @@ class WalletController extends Controller
         return back()->with('success', 'Transfer successful');
     }
 
-    
+
 }
 

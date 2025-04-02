@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Hash;
 class DealsController extends Controller
 {
 
-    
-
     public function depositMoney(){
         return view('user.deposit_money');
     }

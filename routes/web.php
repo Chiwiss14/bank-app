@@ -92,8 +92,7 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::get('/wallet', [WalletController::class, 'show'])->name('wallet.show');
     Route::post('/wallet/deposit', [WalletController::class, 'deposit'])->name('wallet.deposit');
 
-    // Route::get('/wallet/transfer', [WalletController::class, 'transfer'])->name('wallet.transfer');
-    // Route::post('/transter', [WalletController::class, 'showTransferForm'])->name('wallet.transfer.form');
+    
     Route::get('/send-money', [walletController::class, 'sendMoney'])->name('user.send');
     Route::post('/transfer-store', [walletController::class, 'storeTransfer'])->name('transfer.store');
 
