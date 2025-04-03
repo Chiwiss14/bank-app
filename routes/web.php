@@ -66,12 +66,6 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
  Route::post('/vtpass/electricity', [VTpassController::class, 'payElectricity'])->name('vtpass.electricity');
 
 
-
-
-
-
-
-
     Route::get('/purchase-data', [UtilitiesController::class, 'purchaseData'])->name('user.data');
     Route::post('/store-data', [UtilitiesController::class, 'storeData'])->name('data.store');
 
@@ -92,7 +86,7 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::get('/wallet', [WalletController::class, 'show'])->name('wallet.show');
     Route::post('/wallet/deposit', [WalletController::class, 'deposit'])->name('wallet.deposit');
 
-    
+
     Route::get('/send-money', [walletController::class, 'sendMoney'])->name('user.send');
     Route::post('/transfer-store', [walletController::class, 'storeTransfer'])->name('transfer.store');
 
@@ -115,3 +109,6 @@ Route::middleware(['auth'])->group(function () {
 
 
 require __DIR__ . '/auth.php';
+
+require __DIR__ . '/admin-auth.php';
+
