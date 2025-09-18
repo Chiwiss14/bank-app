@@ -74,10 +74,10 @@
                         <a id="mobile-menu-toggler" href="#"><i class="fas fa-bars"></i></a>
                         <ul>
                             <li class="current-menu-item has-menu-child">
-                                <a href="{{ route('user.dashboard') }}">Home</a>
+                                <a href="{{ route('dashboard') }}">Home</a>
 
                             </li>
-                            <li class="current-menu-item"><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                            <li class="current-menu-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                             <li class="has-menu-child">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">

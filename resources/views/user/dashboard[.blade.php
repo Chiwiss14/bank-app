@@ -9,7 +9,7 @@
                         <div class="Profile-menu">
                             <ul class="nav secondary-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{{ route('user.dashboard') }}"><i
+                                    <a class="nav-link" href="{{ route('dashboard') }}"><i
                                             class="fas fa-tachometer-alt"></i>Dashboard</a>
                                 </li>
                                 <li class="nav-item">
@@ -30,7 +30,7 @@
                                     <a class="nav-link" href="{{ route('vtpass.selectNetwork') }}"><i
                                             class="fas fa-wallet"></i>Buy Data</a>
                                 </li>
-                               
+
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('wallet.show') }}"><i
                                             class="fas fa-cog"></i>Balance</a>

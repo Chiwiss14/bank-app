@@ -47,7 +47,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 });
 
 Route::prefix('user')->middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+    // Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.transaction_history');
 
     Route::get('/purchase-airtime', [VTpassController::class, 'showAirtime'])->name('user.airtime');
     Route::post('/store-airtime', [VTpassController::class, 'purchaseAirtime'])->name('airtime.store');

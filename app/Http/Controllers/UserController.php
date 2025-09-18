@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function dashboard()
-    {
-        $user = Auth::user();
-        return view('user_dashboard', ['balance' => $user->balance]);
-    }
+    // public function dashboard()
+    // {
+    //     $user = Auth::user();
+    //     return view('user_transaction', ['balance' => $user->balance]);
+    // }
 
     public function confirmPin()
     {
