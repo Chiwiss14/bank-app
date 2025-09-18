@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!--TITLE-->
-    <title>Roysha- Money Transfer and Online Payments HTML Template</title>
+    <title>Roysha- User Dashboard</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" type="image/png" href="/user_assets/images/favicon.png" />
@@ -74,17 +74,10 @@
                         <a id="mobile-menu-toggler" href="#"><i class="fas fa-bars"></i></a>
                         <ul>
                             <li class="current-menu-item has-menu-child">
-                                <a href="#">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Home Gradient</a></li>
-                                    <li><a href="#">Home 01</a></li>
-                                    <li><a href="#">Home 02</a></li>
-                                    <li><a href="#">Home 03</a></li>
-                                    <li><a href="#">Home 04</a></li>
-                                    <li><a href="#">Home 05</a></li>
-                                </ul>
+                                <a href="{{ route('user.dashboard') }}">Home</a>
+
                             </li>
-                            <li class="current-menu-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="current-menu-item"><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
                             <li class="has-menu-child">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
@@ -126,7 +119,8 @@
                                         </a>
                                     </li>
                                     <li class="nav__dropdown-menu-items">
-                                        <a href="{{ route('logout') }}"><i class="icon icon-logout"></i><span>Logout</span></a>
+                                        <a href="{{ route('logout') }}"><i
+                                                class="icon icon-logout"></i><span>Logout</span></a>
                                     </li>
                                 </ul>
                             </li>
@@ -184,73 +178,7 @@
         </div>
         <!-- Admin End of Hero section-->
 
-
-
-        <!-- Admin Content Section  -->
-        <div id="content" class="py-4">
-            <div class="container">
-                <div class="row">
-                    <!-- Left sidebar -->
-                    <aside class="col-lg-3 sidebar">
-                        <div class="widget admin-widget p-0">
-                            <div class="Profile-menu">
-                                <ul class="nav secondary-nav">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="{{ route('user.dashboard') }}"><i
-                                                class="fas fa-tachometer-alt"></i>Dashboard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('pay') }}"><i
-                                                class="fas fa-plus"></i>Deposit Money</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.send') }}"><i
-                                                class="far fa-paper-plane"></i>Send Money</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.airtime') }}"><i
-                                                class="fas fa-wallet"></i>Buy Airtime</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('vtpass.selectNetwork') }}"><i
-                                                class="fas fa-wallet"></i>Buy Data</a>
-                                    </li>
-                                    {{-- <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.data') }}"><i
-                                                class="fas fa-list-ul"></i>Buy Data</a>
-                                    </li> --}}
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('wallet.show') }}"><i
-                                                class="fas fa-cog"></i>Balance</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.confirm_pin') }}"><i
-                                                class="fas fa-cog"></i>Set Pin</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('user.transaction_history') }}"><i
-                                                class="fas fa-cog"></i>Transaction History</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('electricity.show') }}"><i
-                                                class="fas fa-cog"></i>Buy Power</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </aside>
-                    <!-- Left Panel End -->
-
-                    {{ $slot }}
-                </div>
-            </div>
-        </div>
-        <!-- Content end -->
+        {{ $slot }}
 
         <!-- Footer strat -->
         <footer class="footer">

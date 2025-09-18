@@ -14,7 +14,7 @@ class UserController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
-        return view('user.dashboard', ['balance' => $user->balance]);
+        return view('user_dashboard', ['balance' => $user->balance]);
     }
 
     public function confirmPin()

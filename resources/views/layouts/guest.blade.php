@@ -54,49 +54,26 @@
                             data-bs-target="#navbar-content">
                             <i class="fas fa-bars"></i>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+                        <div class="collapse navbar-collapse text-center" id="navbar-content">
                             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="about.html">About Us</a>
-                                </li>
+                                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                                 <li class="nav-item dropdown main-navbar">
                                     <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Product</a>
-                                    <ul class="dropdown-menu main-menu shadow">
-                                        <li class="dropend sub-navbar">
-                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
-                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Account</a>
-                                            <ul class="dropdown-menu sub-menu shadow">
-                                                <li><a class="nav-link" href="account.html">Account</a></li>
-                                                <li><a class="nav-link" href="account-details.html">Account Details</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link" href="product.html">Product</a></li>
-
-                                        <li><a class="nav-link" href="card.html">Card</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown main-navbar">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Pages</a>
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Auth</a>
                                     <ul class="dropdown-menu main-menu shadow">
                                         <li><a class="nav-link" href="{{route ('login') }}">Login</a></li>
                                         <li><a class="nav-link" href="password-set.html">Password Set</a></li>
                                         <li><a class="nav-link" href="{{ route('logout') }}">Logout</a></li>
-                                        <li><a class="nav-link" href="otp.html">OTP</a></li>
+                                        <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
-                                </li>
+
                             </ul>
-                            <div class="right-area header-action d-flex align-items-center">
-                                <a href="register.html" class="cmn-btn">Open Account</a>
-                            </div>
+
                         </div>
                     </nav>
                 </div>
